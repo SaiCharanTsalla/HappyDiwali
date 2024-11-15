@@ -1,0 +1,307 @@
+<!DOCTYPE html><html class=''>
+<head><title>Tsalla Family</title>
+<script !function(){function n(){l(),t()}function t(){window.addEventListener("message",a,!0)}function e(n){var t;try{t={}.toString.call(n)}catch(e){t="[object Object]"}return t}function o(n,t){for(var e=n.length;e--;)if(n[e]===t)return!0;return!1}function r(n){return!!(n&&"object"==typeof n&&"nodeType"in n&&1===n.nodeType&&n.outerHTML)}function c(n,t){return n.toLowerCase()<t.toLowerCase()?-1:1}function i(n){if(null===n||"undefined"==typeof n)return 1;var t,o=e(n);if("[object Number]"===o||"[object Boolean]"===o||"[object String]"===o)return 1;if("[object Function]"===o||"[object global]"===o)return 2;if("[object Object]"===o){var r=Object.keys(n);for(t=0;t<r.length;t++){var c=n[r[t]];if(i={}.toString.call(c),"[object Function]"===i||"[object Object]"===i||"[object Array]"===i)return 2}return 1}if("[object Array]"===o){for(t=0;t<n.length;t++){var c=n[t],i={}.toString.call(c);if("[object Function]"===i||"[object Object]"===i||"[object Array]"===i)return 2}return 1}return 2}function u(n,t,o){var r,i,l="",a=[];if(o=o||"",t=t||[],null===n)return"null";if("undefined"==typeof n)return"undefined";if(l=e(n),"[object Object]"==l&&(l="Object"),"[object Number]"==l)return""+n;if("[object Boolean]"==l)return n?"true":"false";if("[object Function]"==l)return n.toString().split("\n  ").join("\n"+o);if("[object String]"==l)return'"'+n.replace(/"/g,"'")+'"';for(i=0;i<t.length;i++)if(n===t[i])return"[circular "+l.slice(1)+("outerHTML"in n?" :\n"+n.outerHTML.split("\n").join("\n"+o):"");if(t.push(n),"[object Array]"==l){for(r=0;r<n.length;r++)a.push(u(n[r],t));return"["+a.join(", ")+"]"}if(l.match(/Array/))return l;var f=l+" ",s=o+"  ";if(o.length/2<2){var b=[];try{for(r in n)b.push(r)}catch(j){}for(b.sort(c),r=0;r<b.length;r++)try{a.push(s+b[r]+": "+u(n[b[r]],t,s))}catch(j){}}return a.length?f+"{\n"+a.join(",\n")+"\n"+o+"}":f+"{}"}function l(){if(window.console)for(var n=0;n<f.length;n++)!function(){var t=f[n];window.console[t]&&(window.console[t]=function(){for(var n=[].slice.call(arguments),e=[],o=[],c=0;c<n.length;c++)r(n[c])?(o.push(u(n[c].outerHTML)),e.push(1)):(o.push(u(n[c])),e.push(i(n[c])));b.postMessage(["console",{"function":t,arguments:o,complexity:Math.max.apply(null,e)}],"*"),this.apply(console,n)}.bind(console[t]))}()}function a(n){var t=n.data;if("object"==typeof t&&"command"===t.type){try{var e=window.eval(t.command)}catch(r){return void console.error(r.message)}if(.30000000000000004===e)return void console.log("I love JavaScript too.");if(o(s,t.command))return void console.log("Plz no WATS.");console.log(e)}}var f=["log","error","warn","info","debug","table","time","timeEnd","count","clear"],s=["({} + [])","({} + []);","({} + [])","({} + []);","{} + {}","{} + {};","({} + {})","({} + {});","[] == []","[] == [];","[] == ![]","[] == ![];","[] + []","[] + [];"],b=window.parent;n()}();>
+</script>
+<script !function(){function e(){if(void 0!=window.pageYOffset)return{x:pageXOffset,y:t(pageYOffset)};var e,n,o=document,r=o.documentElement,i=o.body;return e=r.scrollLeft||i.scrollLeft||0,n=r.scrollTop||i.scrollTop||0,{x:e,y:t(n)}}function t(e){return Number((e/(n()-window.innerHeight)).toFixed(2))}function n(){var e=document.body,t=document.documentElement,n=Math.max(e.scrollHeight,e.offsetHeight,t.clientHeight,t.scrollHeight,t.offsetHeight);return n}function o(e,t,n,o){return e/=o/2,1>e?n/2*e*e+t:(e--,-n/2*(e*(e-2)-1)+t)}function r(e){if(e){for(var t=[],n=!1;null!=e.parentNode;){for(var o=0,r=0,i=0;i<e.parentNode.childNodes.length;i++){var a=e.parentNode.childNodes[i];a.nodeName==e.nodeName&&(a===e&&(r=o),o++)}var c=e.nodeName.toLowerCase();n&&(c+="::shadow",n=!1),o>1?t.unshift(c+":nth-of-type("+(r+1)+")"):t.unshift(c),e=e.parentNode,11===e.nodeType&&(n=!0,e=e.host)}return t.splice(0,1),t.join(" > ")}}function i(e){N||(N=e);var t=e-N,n=o(t,E,b-E,X);if(window.scrollTo(0,n),X>t){requestAnimationFrame(i)}else N=null,E=null,L=!1}function a(){c()}function c(){window.addEventListener("message",f,!0);for(var e=0;e<k.length;e++)window.addEventListener(k[e],u,!0);window.addEventListener("scroll",s,!0)}function s(){clearTimeout(w),w=setTimeout(function(){l()},T)}function l(){C.postMessage(["event",{type:"scroll",positions:e()}],"*")}function u(e){for(var t=r(e.target),n=e.constructor.name,o=e.type,i={type:o,targetPath:t,eventClass:n},a={},c=0;c<x.length;c++){var s=x[c];"undefined"!=typeof e[s]&&(a[s]=e[s])}i.options=a,Y.push(i),clearTimeout(g),g=setTimeout(function(){d()},H)}function d(){C.postMessage(["event",Y],"*"),Y=[]}function f(e){var t=e.data;t.length&&"event"===t[0]&&t[1]&&("scroll"===t[1].type?p(t[1].positions):v(t[1]))}function p(e){L!==!0&&(L=!0,E=document.documentElement.scrollTop||document.body.scrollTop,b=e.y*(n()-window.innerHeight),requestAnimationFrame(i))}function v(e){for(var t=0;t<e.length;t++)h(e[t])}function h(e){"MouseEvent"===e.eventClass?m(e):"KeyboardEvent"===e.eventClass&&y(e)}function m(e){var t=document.querySelector(e.targetPath),n=new MouseEvent(e.type,{bubbles:!0,cancelable:!0,view:window});t.dispatchEvent(n)}function y(e){var t=document.querySelector(e.targetPath),n=new KeyboardEvent(e.type,e.options);t.dispatchEvent(n)}var w,g,E,b,N,T=300,H=500,Y=[],L=!1,X=300,k=["click","keydown","keypress","keyup"],x=["altKey","code","ctrlKey","keyCode","which","clientX","clientY","layerX","layerY","offsetX","offsetY","pageX","pageY","screenX","screenY","x","y"],C=window.parent;a()}();>
+</script>
+<script var CSSReload={head:null,init:function(){this._storeHead(),this._listenToPostMessages()},_storeHead:function(){this.head=document.head||document.getElementsByTagName("head")[0]},_listenToPostMessages:function(){var e=this;window[this._eventMethod()](this._messageEvent(),function(t){try{var s=JSON.parse(t.data);"string"==typeof s.css&&e._refreshCSS(s)}catch(n){}},!1)},_messageEvent:function(){return"attachEvent"===this._eventMethod()?"onmessage":"message"},_eventMethod:function(){return window.addEventListener?"addEventListener":"attachEvent"},_refreshCSS:function(e){var t=this._findPrevCPStyle(),s=document.createElement("style");s.type="text/css",s.className="cp-pen-styles",s.styleSheet?s.styleSheet.cssText=e.css:s.appendChild(document.createTextNode(e.css)),this.head.appendChild(s),t&&t.parentNode.removeChild(t),"prefixfree"===e.css_prefix&&StyleFix.process()},_findPrevCPStyle:function(){for(var e=document.getElementsByTagName("style"),t=e.length-1;t>=0;t--)if("cp-pen-styles"===e[t].className)return e[t];return!1}};CSSReload.init();>
+</script><meta charset='UTF-8'><meta name="robots" content="noindex">
+
+
+<style class="cp-pen-styles">
+/* basic styles for black background and crosshair cursor */
+body {
+	background-image: url("happy-diwali.jpg");
+	
+	margin: 0;
+}
+
+canvas {
+	cursor: crosshair;
+	display: block;
+}</style></head><body>
+
+<!-- setup our canvas element -->
+<canvas id="canvas">Canvas is not supported in your browser.</canvas>
+
+<script>// when animating on canvas, it is best to use requestAnimationFrame instead of setTimeout or setInterval
+// not supported in all browsers though and sometimes needs a prefix, so we need a shim
+window.requestAnimFrame = ( function() {
+	return window.requestAnimationFrame ||
+				window.webkitRequestAnimationFrame ||
+				window.mozRequestAnimationFrame ||
+				function( callback ) {
+					window.setTimeout( callback, 1000 / 60 );
+				};
+})();
+
+// now we will setup our basic variables for the demo
+var canvas = document.getElementById( 'canvas' ),
+		ctx = canvas.getContext( '2d' ),
+		// full screen dimensions
+		cw = window.innerWidth,
+		ch = window.innerHeight,
+		// firework collection
+		fireworks = [],
+		// particle collection
+		particles = [],
+		// starting hue
+		hue = 120,
+		// when launching fireworks with a click, too many get launched at once without a limiter, one launch per 5 loop ticks
+		limiterTotal = 5,
+		limiterTick = 0,
+		// this will time the auto launches of fireworks, one launch per 80 loop ticks
+		timerTotal = 80,
+		timerTick = 0,
+		mousedown = false,
+		// mouse x coordinate,
+		mx,
+		// mouse y coordinate
+		my;
+		
+// set canvas dimensions
+canvas.width = cw;
+canvas.height = ch;
+
+// now we are going to setup our function placeholders for the entire demo
+
+// get a random number within a range
+function random( min, max ) {
+	return Math.random() * ( max - min ) + min;
+}
+
+// calculate the distance between two points
+function calculateDistance( p1x, p1y, p2x, p2y ) {
+	var xDistance = p1x - p2x,
+			yDistance = p1y - p2y;
+	return Math.sqrt( Math.pow( xDistance, 2 ) + Math.pow( yDistance, 2 ) );
+}
+
+// create firework
+function Firework( sx, sy, tx, ty ) {
+	// actual coordinates
+	this.x = sx;
+	this.y = sy;
+	// starting coordinates
+	this.sx = sx;
+	this.sy = sy;
+	// target coordinates
+	this.tx = tx;
+	this.ty = ty;
+	// distance from starting point to target
+	this.distanceToTarget = calculateDistance( sx, sy, tx, ty );
+	this.distanceTraveled = 0;
+	// track the past coordinates of each firework to create a trail effect, increase the coordinate count to create more prominent trails
+	this.coordinates = [];
+	this.coordinateCount = 3;
+	// populate initial coordinate collection with the current coordinates
+	while( this.coordinateCount-- ) {
+		this.coordinates.push( [ this.x, this.y ] );
+	}
+	this.angle = Math.atan2( ty - sy, tx - sx );
+	this.speed = 2;
+	this.acceleration = 1.05;
+	this.brightness = random( 50, 70 );
+	// circle target indicator radius
+	this.targetRadius = 1;
+}
+
+// update firework
+Firework.prototype.update = function( index ) {
+	// remove last item in coordinates array
+	this.coordinates.pop();
+	// add current coordinates to the start of the array
+	this.coordinates.unshift( [ this.x, this.y ] );
+	
+	// cycle the circle target indicator radius
+	if( this.targetRadius < 8 ) {
+		this.targetRadius += 0.3;
+	} else {
+		this.targetRadius = 1;
+	}
+	
+	// speed up the firework
+	this.speed *= this.acceleration;
+	
+	// get the current velocities based on angle and speed
+	var vx = Math.cos( this.angle ) * this.speed,
+			vy = Math.sin( this.angle ) * this.speed;
+	// how far will the firework have traveled with velocities applied?
+	this.distanceTraveled = calculateDistance( this.sx, this.sy, this.x + vx, this.y + vy );
+	
+	// if the distance traveled, including velocities, is greater than the initial distance to the target, then the target has been reached
+	if( this.distanceTraveled >= this.distanceToTarget ) {
+		createParticles( this.tx, this.ty );
+		// remove the firework, use the index passed into the update function to determine which to remove
+		fireworks.splice( index, 1 );
+	} else {
+		// target not reached, keep traveling
+		this.x += vx;
+		this.y += vy;
+	}
+}
+
+// draw firework
+Firework.prototype.draw = function() {
+	ctx.beginPath();
+	// move to the last tracked coordinate in the set, then draw a line to the current x and y
+	ctx.moveTo( this.coordinates[ this.coordinates.length - 1][ 0 ], this.coordinates[ this.coordinates.length - 1][ 1 ] );
+	ctx.lineTo( this.x, this.y );
+	ctx.strokeStyle = 'hsl(' + hue + ', 100%, ' + this.brightness + '%)';
+	ctx.stroke();
+	
+	ctx.beginPath();
+	// draw the target for this firework with a pulsing circle
+	ctx.arc( this.tx, this.ty, this.targetRadius, 0, Math.PI * 2 );
+	ctx.stroke();
+}
+
+// create particle
+function Particle( x, y ) {
+	this.x = x;
+	this.y = y;
+	// track the past coordinates of each particle to create a trail effect, increase the coordinate count to create more prominent trails
+	this.coordinates = [];
+	this.coordinateCount = 5;
+	while( this.coordinateCount-- ) {
+		this.coordinates.push( [ this.x, this.y ] );
+	}
+	// set a random angle in all possible directions, in radians
+	this.angle = random( 0, Math.PI * 2 );
+	this.speed = random( 1, 10 );
+	// friction will slow the particle down
+	this.friction = 0.95;
+	// gravity will be applied and pull the particle down
+	this.gravity = 1;
+	// set the hue to a random number +-50 of the overall hue variable
+	this.hue = random( hue - 50, hue + 50 );
+	this.brightness = random( 50, 80 );
+	this.alpha = 1;
+	// set how fast the particle fades out
+	this.decay = random( 0.015, 0.03 );
+}
+
+// update particle
+Particle.prototype.update = function( index ) {
+	// remove last item in coordinates array
+	this.coordinates.pop();
+	// add current coordinates to the start of the array
+	this.coordinates.unshift( [ this.x, this.y ] );
+	// slow down the particle
+	this.speed *= this.friction;
+	// apply velocity
+	this.x += Math.cos( this.angle ) * this.speed;
+	this.y += Math.sin( this.angle ) * this.speed + this.gravity;
+	// fade out the particle
+	this.alpha -= this.decay;
+	
+	// remove the particle once the alpha is low enough, based on the passed in index
+	if( this.alpha <= this.decay ) {
+		particles.splice( index, 1 );
+	}
+}
+
+// draw particle
+Particle.prototype.draw = function() {
+	ctx. beginPath();
+	// move to the last tracked coordinates in the set, then draw a line to the current x and y
+	ctx.moveTo( this.coordinates[ this.coordinates.length - 1 ][ 0 ], this.coordinates[ this.coordinates.length - 1 ][ 1 ] );
+	ctx.lineTo( this.x, this.y );
+	ctx.strokeStyle = 'hsla(' + this.hue + ', 100%, ' + this.brightness + '%, ' + this.alpha + ')';
+	ctx.stroke();
+}
+
+// create particle group/explosion
+function createParticles( x, y ) {
+	// increase the particle count for a bigger explosion, beware of the canvas performance hit with the increased particles though
+	var particleCount = 30;
+	while( particleCount-- ) {
+		particles.push( new Particle( x, y ) );
+	}
+}
+
+// main demo loop
+function loop() {
+	// this function will run endlessly with requestAnimationFrame
+	requestAnimFrame( loop );
+	
+	// increase the hue to get different colored fireworks over time
+	//hue += 0.5;
+  
+  // create random color
+  hue= random(0, 360 );
+	
+	// normally, clearRect() would be used to clear the canvas
+	// we want to create a trailing effect though
+	// setting the composite operation to destination-out will allow us to clear the canvas at a specific opacity, rather than wiping it entirely
+	ctx.globalCompositeOperation = 'destination-out';
+	// decrease the alpha property to create more prominent trails
+	ctx.fillStyle = 'rgba(0, 0, 0, 0.5)';
+	ctx.fillRect( 0, 0, cw, ch );
+	// change the composite operation back to our main mode
+	// lighter creates bright highlight points as the fireworks and particles overlap each other
+	ctx.globalCompositeOperation = 'lighter';
+	
+	// loop over each firework, draw it, update it
+	var i = fireworks.length;
+	while( i-- ) {
+		fireworks[ i ].draw();
+		fireworks[ i ].update( i );
+	}
+	
+	// loop over each particle, draw it, update it
+	var i = particles.length;
+	while( i-- ) {
+		particles[ i ].draw();
+		particles[ i ].update( i );
+	}
+	
+	// launch fireworks automatically to random coordinates, when the mouse isn't down
+	if( timerTick >= timerTotal ) {
+		if( !mousedown ) {
+			// start the firework at the bottom middle of the screen, then set the random target coordinates, the random y coordinates will be set within the range of the top half of the screen
+			fireworks.push( new Firework( cw / 2, ch, random( 0, cw ), random( 0, ch / 2 ) ) );
+			timerTick = 0;
+		}
+	} else {
+		timerTick++;
+	}
+	
+	// limit the rate at which fireworks get launched when mouse is down
+	if( limiterTick >= limiterTotal ) {
+		if( mousedown ) {
+			// start the firework at the bottom middle of the screen, then set the current mouse coordinates as the target
+			fireworks.push( new Firework( cw / 2, ch, mx, my ) );
+			limiterTick = 0;
+		}
+	} else {
+		limiterTick++;
+	}
+}
+
+// mouse event bindings
+// update the mouse coordinates on mousemove
+canvas.addEventListener( 'mousemove', function( e ) {
+	mx = e.pageX - canvas.offsetLeft;
+	my = e.pageY - canvas.offsetTop;
+});
+
+// toggle mousedown state and prevent canvas from being selected
+canvas.addEventListener( 'mousedown', function( e ) {
+	e.preventDefault();
+	mousedown = true;
+});
+
+canvas.addEventListener( 'mouseup', function( e ) {
+	e.preventDefault();
+	mousedown = false;
+});
+
+// once the window loads, we are ready for some fireworks!
+window.onload = loop;
+
+
+//# sourceURL=pen.js
+</script>
+
+</body></html>
